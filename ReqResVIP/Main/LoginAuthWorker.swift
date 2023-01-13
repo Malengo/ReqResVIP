@@ -32,7 +32,7 @@ class LoginAuthWorker: LoginAuthLogic {
     }
     
     private func requestApi(user: LoadUser.Request, completion: @escaping(Bool) -> ()) async throws {
-        guard let url = URL(string: "https://reqres.in/api/login/") else { return }
+        guard let url = URL(string: LoginConstants.Authenticator.urlPostRequest.rawValue) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

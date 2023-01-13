@@ -19,11 +19,11 @@ class LoginUserDefaults: LoginUserDefaultsProtocol {
     private let userDefaults = UserDefaults.standard
     
     func saveToken(_ token: String) {
-        userDefaults.set(token, forKey: "Token")
+        userDefaults.set(token, forKey: LoginConstants.LoginUserDefaults.tokenKey.rawValue)
     }
     
     func getToken() -> Bool {
-        guard let _ = userDefaults.string(forKey: "Token") else { return false }
+        guard let _ = userDefaults.string(forKey: LoginConstants.LoginUserDefaults.tokenKey.rawValue) else { return false }
         return true
     }
 }
