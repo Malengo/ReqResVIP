@@ -8,5 +8,5 @@
 import Foundation
 
 struct Token: Decodable {
-    var token: String
+    var number: String
 }

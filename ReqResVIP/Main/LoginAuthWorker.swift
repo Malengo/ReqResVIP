@@ -18,20 +18,15 @@ class LoginAuthWorker: LoginAuthLogic {
     func makeAuth(user: LoadUser.Request, completion: @escaping (Result<Bool, ResponseError>) -> Void) {
         Task {
             do {
-                try await requestApi(user: user) { result in
-                    if result {
-                        completion(.success(true))
-                    } else {
-                        completion(.failure(.invalidData))
-                    }
-                }
+                try await requestApi(user: user)
+                completion(.success(true))
             } catch {
                 completion(.failure(.invalidData))
             }
         }
     }
     
-    private func requestApi(user: LoadUser.Request, completion: @escaping(Bool) -> ()) async throws {
+    private func requestApi(user: LoadUser.Request) async throws {
         guard let url = URL(string: LoginConstants.Authenticator.urlPostRequest.rawValue) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -41,15 +36,13 @@ class LoginAuthWorker: LoginAuthLogic {
         let (data, response) = try await URLSession.shared.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200 else {
-            completion(false)
             return
         }
         
         let token = try JSONDecoder().decode(Token.self, from: data)
         
         DispatchQueue.global(qos: .background).async {
-            self.loginUserDefauts.saveToken(token.token)
+            self.loginUserDefauts.saveToken(token.number)
         }
-        completion(true)
     }
 }
