@@ -11,6 +11,7 @@ struct LoginConstants {
     
     enum LoginUserDefaults: String {
         case tokenKey = "Login"
+        case dateToken = "Date"
     }
     
     enum Authenticator: String {
