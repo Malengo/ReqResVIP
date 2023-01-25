@@ -36,7 +36,7 @@ class LoginView: UIView, ViewCodeProtocol {
     private(set) lazy var passwordTextField: UITextField = {
         var field = UITextField()
         field.borderStyle = .line
-        field.text = "cityslicka"
+        field.text = "citysli"
         return field
     }()
     
