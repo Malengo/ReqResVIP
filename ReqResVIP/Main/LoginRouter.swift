@@ -9,6 +9,7 @@ import Foundation
 
 protocol LoginRoutingLogic {
     func routeToHomeView()
+    func routeToAlertDialog(error: String)
 }
 
 class LoginRouter: LoginRoutingLogic {
@@ -24,5 +25,9 @@ class LoginRouter: LoginRoutingLogic {
             vc.modalPresentationStyle = .currentContext
             self.viewController?.present(vc, animated: true)
         }
+    }
+    
+    func routeToAlertDialog(error: String) {
+        print(error)
     }
 }

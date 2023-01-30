@@ -11,8 +11,13 @@ import Foundation
 class LoginRouterMock: LoginRoutingLogic {
     
     var wasRouteToHomeViewCalled: Bool = false
+    var wasRouteToAlertDialogCalled: Bool = false
     
     func routeToHomeView() {
         wasRouteToHomeViewCalled = true
-    }   
+    }
+    
+    func routeToAlertDialog(error: String) {
+        wasRouteToAlertDialogCalled = true
+    }
 }

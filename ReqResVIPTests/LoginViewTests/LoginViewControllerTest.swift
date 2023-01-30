@@ -61,5 +61,41 @@ final class LoginViewControllerTest: XCTestCase {
         //Then
         XCTAssertTrue(router.wasRouteToHomeViewCalled)
     }
+    
+    func testFailureAuthMustCalledRouteToAlertDialog() {
+        //Given
+        let error = ResponseError.invalidData
+        sut.router = router
+        
+        //When
+        sut.failureAuth(error: error)
+        
+        //Then
+        XCTAssertTrue(router.wasRouteToAlertDialogCalled)
+    }
+    
+    func testTextFieldDidBeginEditing() {
+        //Given
+        let textField = sut.mainView.nameTextfied
+        textField.becomeFirstResponder()
+        
+        //When
+        sut.textFieldDidBeginEditing(textField)
+        
+        //Then
+        XCTAssertEqual(textField.layer.borderColor, UIColor.black.cgColor)
+    }
+    
+    func testTextFieldShouldBeginEditing() {
+        //Given
+        let textField = sut.mainView.nameTextfied
+        textField.becomeFirstResponder()
+        
+        //When
+        let _ = sut.textFieldShouldBeginEditing(textField)
+        
+        //Then
+        XCTAssertEqual(textField.layer.borderColor, UIColor.black.cgColor)
+    }
 
 }

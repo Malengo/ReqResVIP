@@ -69,7 +69,7 @@ extension LoginViewController: LoginViewDisplayLogic {
     }
     
     func failureAuth(error: ResponseError) {
-        print(error.description)
+        router?.routeToAlertDialog(error: error.description)
     }
 }
 
