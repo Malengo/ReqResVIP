@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = scene
         var loadController: UIViewController = UIViewController()
-        if LoginUserDefaults().checkDateToken() {
+        if LoginUserDefaults.standard.checkDateToken() {
             loadController = HomeViewController()
         } else {
             loadController = LoginViewController()

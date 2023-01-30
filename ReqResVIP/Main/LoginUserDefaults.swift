@@ -35,9 +35,11 @@ class LoginUserDefaults: LoginUserDefaultsProtocol {
             let seconds = dateToken.timeIntervalSinceNow * -1
             if seconds > 300.0 {
                 return false
+            } else {
+                return true
             }
         }
-        return true
+        return false
     }
 
     // MARK: - private method

@@ -10,6 +10,8 @@
 		CE2E3207294653E6001534F4 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E3206294653E6001534F4 /* ResponseError.swift */; };
 		CE3D0C0D296DEC53005FF909 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D0C0C296DEC53005FF909 /* LoginRouter.swift */; };
 		CE42DE2B294674A0006BF843 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42DE2A294674A0006BF843 /* Token.swift */; };
+		CE4DDD9C2983F9B000C564EF /* LoginViewInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DDD9B2983F9B000C564EF /* LoginViewInteractorMock.swift */; };
+		CE4DDD9E2984010A00C564EF /* LoginRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DDD9D2984010A00C564EF /* LoginRouterMock.swift */; };
 		CE4ED200293A31D500126078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ED1FF293A31D500126078 /* AppDelegate.swift */; };
 		CE4ED202293A31D500126078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ED201293A31D500126078 /* SceneDelegate.swift */; };
 		CE4ED204293A31D500126078 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4ED203293A31D500126078 /* LoginViewController.swift */; };
@@ -23,15 +25,28 @@
 		CE6608BA293B7E3A00343DAC /* LoginAuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6608B9293B7E3A00343DAC /* LoginAuthWorker.swift */; };
 		CE83113C296D9717005660DC /* LoginUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83113B296D9717005660DC /* LoginUserDefaults.swift */; };
 		CE98EF8729450CE0000D4729 /* Textfield-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */; };
+		CECAAB162982C7640075DCF9 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAAB152982C7640075DCF9 /* LoginViewControllerTest.swift */; };
 		CECD3AD6296DA40F00E3058E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD3AD5296DA40F00E3058E /* HomeView.swift */; };
 		CECD3AD8296DA48E00E3058E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD3AD7296DA48E00E3058E /* HomeViewController.swift */; };
 		CEE1ED98297194F70078943F /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1ED97297194F70078943F /* LoginConstants.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CECAAB102982C6EB0075DCF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4ED1F4293A31D500126078 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE4ED1FB293A31D500126078;
+			remoteInfo = ReqResVIP;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CE2E3206294653E6001534F4 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		CE3D0C0C296DEC53005FF909 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		CE42DE2A294674A0006BF843 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		CE4DDD9B2983F9B000C564EF /* LoginViewInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractorMock.swift; sourceTree = "<group>"; };
+		CE4DDD9D2984010A00C564EF /* LoginRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterMock.swift; sourceTree = "<group>"; };
 		CE4ED1FC293A31D500126078 /* ReqResVIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReqResVIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4ED1FF293A31D500126078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4ED201293A31D500126078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +62,8 @@
 		CE6608B9293B7E3A00343DAC /* LoginAuthWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthWorker.swift; sourceTree = "<group>"; };
 		CE83113B296D9717005660DC /* LoginUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserDefaults.swift; sourceTree = "<group>"; };
 		CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield-Extension.swift"; sourceTree = "<group>"; };
+		CECAAB0C2982C6EB0075DCF9 /* ReqResVIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReqResVIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECAAB152982C7640075DCF9 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		CECD3AD5296DA40F00E3058E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CECD3AD7296DA48E00E3058E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEE1ED97297194F70078943F /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
@@ -60,13 +77,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECAAB092982C6EB0075DCF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4DDD9A2983F98B00C564EF /* LoginViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				CECAAB152982C7640075DCF9 /* LoginViewControllerTest.swift */,
+				CE4DDD9B2983F9B000C564EF /* LoginViewInteractorMock.swift */,
+				CE4DDD9D2984010A00C564EF /* LoginRouterMock.swift */,
+			);
+			path = LoginViewTests;
+			sourceTree = "<group>";
+		};
 		CE4ED1F3293A31D500126078 = {
 			isa = PBXGroup;
 			children = (
 				CE4ED1FE293A31D500126078 /* ReqResVIP */,
+				CECAAB0D2982C6EB0075DCF9 /* ReqResVIPTests */,
 				CE4ED1FD293A31D500126078 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4ED1FC293A31D500126078 /* ReqResVIP.app */,
+				CECAAB0C2982C6EB0075DCF9 /* ReqResVIPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +173,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CECAAB0D2982C6EB0075DCF9 /* ReqResVIPTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE4DDD9A2983F98B00C564EF /* LoginViewTests */,
+			);
+			path = ReqResVIPTests;
+			sourceTree = "<group>";
+		};
 		CECD3AD4296DA3F900E3058E /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +210,24 @@
 			productReference = CE4ED1FC293A31D500126078 /* ReqResVIP.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CECAAB0B2982C6EB0075DCF9 /* ReqResVIPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECAAB142982C6EB0075DCF9 /* Build configuration list for PBXNativeTarget "ReqResVIPTests" */;
+			buildPhases = (
+				CECAAB082982C6EB0075DCF9 /* Sources */,
+				CECAAB092982C6EB0075DCF9 /* Frameworks */,
+				CECAAB0A2982C6EB0075DCF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECAAB112982C6EB0075DCF9 /* PBXTargetDependency */,
+			);
+			name = ReqResVIPTests;
+			productName = ReqResVIPTests;
+			productReference = CECAAB0C2982C6EB0075DCF9 /* ReqResVIPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -173,11 +235,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					CE4ED1FB293A31D500126078 = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					CECAAB0B2982C6EB0075DCF9 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+						TestTargetID = CE4ED1FB293A31D500126078;
 					};
 				};
 			};
@@ -195,6 +262,7 @@
 			projectRoot = "";
 			targets = (
 				CE4ED1FB293A31D500126078 /* ReqResVIP */,
+				CECAAB0B2982C6EB0075DCF9 /* ReqResVIPTests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +274,13 @@
 			files = (
 				CE4ED20C293A31D700126078 /* LaunchScreen.storyboard in Resources */,
 				CE4ED209293A31D700126078 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAAB0A2982C6EB0075DCF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +311,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECAAB082982C6EB0075DCF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4DDD9E2984010A00C564EF /* LoginRouterMock.swift in Sources */,
+				CECAAB162982C7640075DCF9 /* LoginViewControllerTest.swift in Sources */,
+				CE4DDD9C2983F9B000C564EF /* LoginViewInteractorMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CECAAB112982C6EB0075DCF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE4ED1FB293A31D500126078 /* ReqResVIP */;
+			targetProxy = CECAAB102982C6EB0075DCF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE4ED20A293A31D700126078 /* LaunchScreen.storyboard */ = {
@@ -418,6 +511,63 @@
 			};
 			name = Release;
 		};
+		CECAAB122982C6EB0075DCF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HX6PAF8Z8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.malengo.ReqResVIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReqResVIP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ReqResVIP";
+			};
+			name = Debug;
+		};
+		CECAAB132982C6EB0075DCF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HX6PAF8Z8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.malengo.ReqResVIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReqResVIP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ReqResVIP";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -435,6 +585,15 @@
 			buildConfigurations = (
 				CE4ED211293A31D700126078 /* Debug */,
 				CE4ED212293A31D700126078 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECAAB142982C6EB0075DCF9 /* Build configuration list for PBXNativeTarget "ReqResVIPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAAB122982C6EB0075DCF9 /* Debug */,
+				CECAAB132982C6EB0075DCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
