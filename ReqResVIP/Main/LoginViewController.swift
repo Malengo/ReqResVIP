@@ -14,7 +14,7 @@ protocol LoginViewDisplayLogic {
 
 class LoginViewController: UIViewController {
     
-    lazy var mainView: LoginView = {
+    lazy var mainView: LoginViewProtocol = {
         let view = LoginView()
         return view
     }()
@@ -49,12 +49,11 @@ class LoginViewController: UIViewController {
     
     @objc
     private func validateUser() {
-        guard mainView.nameTextfied.isValid(),
-              mainView.passwordTextField.isValid() else { mainView.verifyField()
+        guard mainView.validateFields() else { mainView.verifyField()
             return
         }
         
-        guard let name = mainView.nameTextfied.text,
+        guard let name = mainView.nameTextField.text,
               let password = mainView.passwordTextField.text else { return }
         
         let user = LoadUser.Request(user: User(email: name, password: password))

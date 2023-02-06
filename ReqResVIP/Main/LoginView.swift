@@ -7,7 +7,18 @@
 
 import UIKit
 
-class LoginView: UIView, ViewCodeProtocol {
+protocol LoginViewProtocol: ViewCodeProtocol {
+    func addActionInButtonLogin(in target: Any?, selector: Selector)
+    func setupTextFieldDelegate(_ delegate: UITextFieldDelegate)
+    func verifyField()
+    func validateFields() -> Bool
+    
+    var nameTextField: UITextField { get set }
+    var passwordTextField: UITextField { get set }
+    var buttonLogin: UIButton { get set }
+}
+
+class LoginView: UIView, LoginViewProtocol {
     
     // MARK: - Components
     private(set) lazy var nameLabel: UILabel = {
@@ -24,7 +35,7 @@ class LoginView: UIView, ViewCodeProtocol {
         return label
     }()
     
-    private(set) lazy var nameTextfied: UITextField = {
+    lazy var nameTextField: UITextField = {
         var field = UITextField()
         field.borderStyle = .bezel
         field.text = "eve.holt@reqres.in"
@@ -33,14 +44,14 @@ class LoginView: UIView, ViewCodeProtocol {
         return field
     }()
     
-    private(set) lazy var passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         var field = UITextField()
         field.borderStyle = .line
         field.text = "citysli"
         return field
     }()
     
-    private(set) lazy var buttonLogin: UIButton = {
+    lazy var buttonLogin: UIButton = {
         var button = UIButton()
         button.setTitle("Login", for: .normal)
         button.backgroundColor = .systemBlue
@@ -62,7 +73,7 @@ class LoginView: UIView, ViewCodeProtocol {
         addSubview(loginStack)
         
         loginStack.addArrangedSubview(nameLabel)
-        loginStack.addArrangedSubview(nameTextfied)
+        loginStack.addArrangedSubview(nameTextField)
         loginStack.addArrangedSubview(passwordLabel)
         loginStack.addArrangedSubview(passwordTextField)
         loginStack.addArrangedSubview(buttonLogin)
@@ -86,17 +97,25 @@ class LoginView: UIView, ViewCodeProtocol {
     }
     
     func setupTextFieldDelegate(_ delegate: UITextFieldDelegate) {
-        nameTextfied.delegate = delegate
+        nameTextField.delegate = delegate
         passwordTextField.delegate = delegate
     }
     
     func verifyField() {
-        if !nameTextfied.isValid() {
-            updateField(field: nameTextfied)
+        if !nameTextField.isValid() {
+            updateField(field: nameTextField)
         }
         if !passwordTextField.isValid() {
             updateField(field: passwordTextField)
         }
+    }
+    
+    func validateFields() -> Bool {
+        guard nameTextField.isValid(),
+              passwordTextField.isValid() else {
+            return false
+        }
+        return true
     }
     
     private func updateField(field: UITextField) {
