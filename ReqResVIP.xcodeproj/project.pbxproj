@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE22D718299540980044D20E /* LoginRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22D717299540980044D20E /* LoginRouterTest.swift */; };
+		CE22D71A299543460044D20E /* UIViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22D719299543460044D20E /* UIViewControllerSpy.swift */; };
 		CE2E3207294653E6001534F4 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E3206294653E6001534F4 /* ResponseError.swift */; };
 		CE3D0C0D296DEC53005FF909 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D0C0C296DEC53005FF909 /* LoginRouter.swift */; };
 		CE42DE2B294674A0006BF843 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42DE2A294674A0006BF843 /* Token.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE22D717299540980044D20E /* LoginRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterTest.swift; sourceTree = "<group>"; };
+		CE22D719299543460044D20E /* UIViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerSpy.swift; sourceTree = "<group>"; };
 		CE2E3206294653E6001534F4 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		CE3D0C0C296DEC53005FF909 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		CE42DE2A294674A0006BF843 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				CE567084299130E200E0E60B /* Mocks */,
 				CECAAB152982C7640075DCF9 /* LoginViewControllerTest.swift */,
 				CEA3BBDD2987FF4500946D46 /* LoginViewInteractorTest.swift */,
+				CE22D717299540980044D20E /* LoginRouterTest.swift */,
 			);
 			path = LoginViewTests;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				CE4DDD9D2984010A00C564EF /* LoginRouterMock.swift */,
 				CEA3BBE1298808BC00946D46 /* LoginAuthWorkerMock.swift */,
 				CE5670852991314200E0E60B /* LoginViewMock.swift */,
+				CE22D719299543460044D20E /* UIViewControllerSpy.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -337,11 +343,13 @@
 			files = (
 				CE4DDD9E2984010A00C564EF /* LoginRouterMock.swift in Sources */,
 				CEA3BBE2298808BC00946D46 /* LoginAuthWorkerMock.swift in Sources */,
+				CE22D718299540980044D20E /* LoginRouterTest.swift in Sources */,
 				CE5670862991314200E0E60B /* LoginViewMock.swift in Sources */,
 				CECAAB162982C7640075DCF9 /* LoginViewControllerTest.swift in Sources */,
 				CEA3BBE02988017C00946D46 /* LoginViewPresenterMock.swift in Sources */,
 				CE4DDD9C2983F9B000C564EF /* LoginViewInteractorMock.swift in Sources */,
 				CEA3BBDE2987FF4500946D46 /* LoginViewInteractorTest.swift in Sources */,
+				CE22D71A299543460044D20E /* UIViewControllerSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

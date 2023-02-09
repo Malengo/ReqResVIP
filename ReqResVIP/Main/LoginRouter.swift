@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol LoginRoutingLogic {
     func routeToHomeView()
@@ -13,9 +14,9 @@ protocol LoginRoutingLogic {
 }
 
 class LoginRouter: LoginRoutingLogic {
-    weak var viewController: LoginViewController?
+    weak var viewController: UIViewController?
     
-    init(viewController: LoginViewController) {
+    init(viewController: UIViewController) {
         self.viewController = viewController
     }
     
