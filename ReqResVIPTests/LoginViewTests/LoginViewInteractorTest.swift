@@ -16,7 +16,7 @@ final class LoginViewInteractorTest: XCTestCase {
 
     override func setUpWithError() throws {
         presenter = LoginViewPresenterMock()
-        worker = LoginAuthWorkerMock()
+        worker = LoginAuthWorkerMock(loginAuth: LoginAuthAPI())
         sut = LoginViewInteractor(presenter: presenter)
         sut.authWorker = worker
     }

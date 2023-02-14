@@ -8,12 +8,15 @@
 import Foundation
 
 enum ResponseError: Error {
+    case invalidUrl
     case invalidData
     case decodeError
     case httpStatusCodeError(Int)
     
     var description: String {
         switch self {
+        case .invalidUrl:
+            return "Url inválida"
         case .invalidData:
             return "Dados inválidos"
         case .decodeError:

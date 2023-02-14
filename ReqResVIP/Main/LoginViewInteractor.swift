@@ -17,7 +17,7 @@ protocol LoginViewDataStore {
 
 class LoginViewInteractor: LoginViewBusinessLogic {
     
-    var authWorker: LoginAuthLogic = LoginAuthWorker()
+    var authWorker = LoginAuthWorker(loginAuth: LoginAuthAPI())
     let presenter: LoginViewDisplayLogic?
     
     init(presenter: LoginViewDisplayLogic?) {
