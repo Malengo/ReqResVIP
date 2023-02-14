@@ -8,12 +8,12 @@
 import Foundation
 @testable import ReqResVIP
 
-class LoginAuthWorkerMock: LoginAuthLogic {
+class LoginAuthWorkerMock: LoginAuthWorker {
     
     var makeAuthCompletionHandler: ((_ user: LoadUser.Request, _ completion: @escaping (Result<Bool, ResponseError>) -> Void) -> Void)?
     
     
-    func makeAuth(user: ReqResVIP.LoadUser.Request, completion: @escaping (Result<Bool, ReqResVIP.ResponseError>) -> Void) {
+    override func makeAuth(user: ReqResVIP.LoadUser.Request, completion: @escaping (Result<Bool, ReqResVIP.ResponseError>) -> Void) {
         
         makeAuthCompletionHandler?(user, completion)
     }
