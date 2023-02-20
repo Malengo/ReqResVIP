@@ -9,7 +9,7 @@ import UIKit
 
 protocol LoginViewDisplayLogic {
     func successAuth()
-    func failureAuth(error: ResponseError)
+    func failureAuth(_ error: String)
 }
 
 class LoginViewController: UIViewController {
@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - private methods
     private func setup() {
-        let presenter = self
+        let presenter = LoginViewPresenter(view: self)
         self.interactor = LoginViewInteractor(presenter: presenter)
         self.router = LoginRouter(viewController: self)
     }
@@ -67,7 +67,7 @@ extension LoginViewController: LoginViewDisplayLogic {
         router?.routeToHomeView()
     }
     
-    func failureAuth(error: ResponseError) {
+    func failureAuth(_ error: String) {
         router?.routeToAlertDialog(error: error.description)
     }
 }

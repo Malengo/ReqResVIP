@@ -22,13 +22,18 @@ class LoginRouter: LoginRoutingLogic {
     
     func routeToHomeView() {
         DispatchQueue.main.async {
-            let vc = HomeViewController()
-            vc.modalPresentationStyle = .currentContext
-            self.viewController?.present(vc, animated: true)
+            let homeViewController = HomeViewController()
+            homeViewController.modalPresentationStyle = .currentContext
+            self.viewController?.present(homeViewController, animated: true)
         }
     }
     
     func routeToAlertDialog(error: String) {
-        print(error)
+        let alert = UIAlertController(title: "Error ao fazer Login", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Fechar", style: .destructive))
+        
+        DispatchQueue.main.async {
+            self.viewController?.present(alert, animated: true)
+        }
     }
 }

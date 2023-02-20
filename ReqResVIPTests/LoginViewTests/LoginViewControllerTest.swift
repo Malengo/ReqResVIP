@@ -118,7 +118,7 @@ final class LoginViewControllerTest: XCTestCase {
         sut.router = router
         
         //When
-        sut.failureAuth(error: error)
+        sut.failureAuth(error.description)
         
         //Then
         XCTAssertTrue(router.wasRouteToAlertDialogCalled)

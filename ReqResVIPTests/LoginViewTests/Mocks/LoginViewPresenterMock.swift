@@ -8,7 +8,7 @@
 import Foundation
 @testable import ReqResVIP
 
-class LoginViewPresenterMock: LoginViewDisplayLogic {
+class LoginViewPresenterMock: LoginViewPresenterProtocol {
     
     var wasSuccessAuthCalled: Bool = false
     var wasFailureAuthCalled: Bool = false
