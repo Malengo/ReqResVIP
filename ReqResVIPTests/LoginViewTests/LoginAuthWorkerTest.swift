@@ -22,7 +22,7 @@ final class LoginAuthWorkerTest: XCTestCase {
 
     func testMakeAuthMustReturnedSuccess() throws {
         //Given
-        let request = LoadUser.Request(user: User(email: "teste@test.com", password: "12345"))
+        let request = LoginUser.Request(user: User(email: "teste@test.com", password: "12345"))
         let spy = sut?.loginAuth as! LoginAuthApiSpy
         spy.makeAuthCompletionHandler = Result.success(true)
         
@@ -45,7 +45,7 @@ class LoginAuthApiSpy: LoginAuthLogic {
     var makeAuthCalled = false
     var makeAuthCompletionHandler: ((Result<Bool, ResponseError>))?
     
-    func makeAuth(user: LoadUser.Request, completion: @escaping (Result<Bool, ResponseError>) -> Void) {
+    func makeAuth(user: LoginUser.Request, completion: @escaping (Result<Bool, ResponseError>) -> Void) {
         makeAuthCalled = true
         completion(makeAuthCompletionHandler!)
     }

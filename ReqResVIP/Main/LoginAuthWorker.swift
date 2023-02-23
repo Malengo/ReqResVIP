@@ -15,7 +15,7 @@ class LoginAuthWorker {
         self.loginAuth = loginAuth
     }
     
-    func makeAuth(user: LoadUser.Request, completion: @escaping (Result<Bool, ResponseError>) -> Void) {
+    func makeAuth(user: LoginUser.Request, completion: @escaping (Result<Bool, ResponseError>) -> Void) {
         loginAuth.makeAuth(user: user) { result in
             completion(result)
         }

@@ -8,14 +8,14 @@
 import Foundation
 
 protocol LoginAuthLogic {
-    func makeAuth(user: LoadUser.Request, completion: @escaping(Result<Bool, ResponseError>) -> Void)
+    func makeAuth(user: LoginUser.Request, completion: @escaping(Result<Bool, ResponseError>) -> Void)
 }
 
 class LoginAuthAPI: LoginAuthLogic {
     
     let loginUserDefauts = LoginUserDefaults.standard
     
-    func makeAuth(user: LoadUser.Request, completion: @escaping (Result<Bool, ResponseError>) -> Void) {
+    func makeAuth(user: LoginUser.Request, completion: @escaping (Result<Bool, ResponseError>) -> Void) {
         Task {
             do {
                 try await requestApi(user: user)
@@ -31,7 +31,7 @@ class LoginAuthAPI: LoginAuthLogic {
         }
     }
     
-    private func requestApi(user: LoadUser.Request) async throws {
+    private func requestApi(user: LoginUser.Request) async throws {
         guard let url = URL(string: LoginConstants.Authenticator.urlPostRequest.rawValue) else { throw ResponseError.invalidUrl }
         
         var request = URLRequest(url: url)

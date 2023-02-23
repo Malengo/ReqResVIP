@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginViewBusinessLogic {
-    func authenticateUser(user: LoadUser.Request)
+    func authenticateUser(request: LoginUser.Request)
 }
 
 protocol LoginViewDataStore {
@@ -24,8 +24,8 @@ class LoginViewInteractor: LoginViewBusinessLogic {
         self.presenter = presenter
     }
     
-    func authenticateUser(user: LoadUser.Request) {
-        authWorker.makeAuth(user: user) { result  in
+    func authenticateUser(request: LoginUser.Request) {
+        authWorker.makeAuth(user: request) { result  in
             switch result {
             case .success( _):
                 self.presenter?.successAuth()

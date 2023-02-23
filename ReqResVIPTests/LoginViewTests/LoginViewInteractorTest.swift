@@ -28,7 +28,7 @@ final class LoginViewInteractorTest: XCTestCase {
 
     func testAuthenticateUserSuccessMustCallSuccesAuth() {
         //Given
-        let user = LoadUser.Request(user: User(email: "eve.holt@reqres.in", password: "citysli"))
+        let user = LoginUser.Request(user: User(email: "eve.holt@reqres.in", password: "citysli"))
         let ex = expectation(description: "Must called presenter successAuth but dosen't")
         
         worker.makeAuthCompletionHandler = { _, completion in
@@ -36,7 +36,7 @@ final class LoginViewInteractorTest: XCTestCase {
             ex.fulfill()
         }
         //When
-        sut.authenticateUser(user: user)
+        sut.authenticateUser(request: user)
         
         //Then
         waitForExpectations(timeout: 1)
@@ -45,7 +45,7 @@ final class LoginViewInteractorTest: XCTestCase {
 
     func testAuthenticateUserFailureMustCallFailureAuth() {
         //Given
-        let user = LoadUser.Request(user: User(email: "teste@test.com", password: "1234"))
+        let user = LoginUser.Request(user: User(email: "teste@test.com", password: "1234"))
         
         let expectation = expectation(description: "Must called presenter failureAuth but dosen't")
         
@@ -55,7 +55,7 @@ final class LoginViewInteractorTest: XCTestCase {
         }
         
         //When
-        sut.authenticateUser(user: user)
+        sut.authenticateUser(request: user)
         
         //Then
         wait(for: [expectation], timeout: 1)

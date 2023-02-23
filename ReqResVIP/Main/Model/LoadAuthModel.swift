@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LoadUser {
+enum LoginUser {
     struct Request {
         var user: User
     }

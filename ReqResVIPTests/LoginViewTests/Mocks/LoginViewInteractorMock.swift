@@ -12,7 +12,7 @@ class LoginViewInteractorMock: LoginViewBusinessLogic {
     
     var wasAuthenticateUserCalled: Bool = false
     
-    func authenticateUser(user: ReqResVIP.LoadUser.Request) {
+    func authenticateUser(request: ReqResVIP.LoginUser.Request) {
         wasAuthenticateUserCalled = true
     }
 }

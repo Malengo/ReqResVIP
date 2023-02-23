@@ -56,8 +56,8 @@ class LoginViewController: UIViewController {
         guard let name = mainView.nameTextField.text,
               let password = mainView.passwordTextField.text else { return }
         
-        let user = LoadUser.Request(user: User(email: name, password: password))
-        interactor?.authenticateUser(user: user) 
+        let user = LoginUser.Request(user: User(email: name, password: password))
+        interactor?.authenticateUser(request: user) 
     }
 }
 
