@@ -32,7 +32,7 @@ enum ResponseError: Error {
             return "Requisição Inválida"
         case 404:
             return "O servidor não pode encontrar o recurso solicitado"
-        case 500:
+        case 501:
             return "O servidor encontrou uma situação com a qual não sabe lidar."
         default:
             return "Falha no Servidor"

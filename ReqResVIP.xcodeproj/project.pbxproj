@@ -30,6 +30,10 @@
 		CE6608BA293B7E3A00343DAC /* LoginAuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6608B9293B7E3A00343DAC /* LoginAuthAPI.swift */; };
 		CE83113C296D9717005660DC /* LoginUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83113B296D9717005660DC /* LoginUserDefaults.swift */; };
 		CE98EF8729450CE0000D4729 /* Textfield-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */; };
+		CE9F61C329AE856B0043E6A8 /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C229AE856B0043E6A8 /* HomeViewInteractor.swift */; };
+		CE9F61C529AE86710043E6A8 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C429AE86710043E6A8 /* HomeWorker.swift */; };
+		CE9F61C829AE89DF0043E6A8 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C729AE89DF0043E6A8 /* Users.swift */; };
+		CE9F61CC29AE8B050043E6A8 /* Employer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61CB29AE8B050043E6A8 /* Employer.swift */; };
 		CEA12C4C29A3EB7E00F1CFC1 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA12C4B29A3EB7E00F1CFC1 /* LoginViewPresenter.swift */; };
 		CEA3BBDE2987FF4500946D46 /* LoginViewInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3BBDD2987FF4500946D46 /* LoginViewInteractorTest.swift */; };
 		CEA3BBE02988017C00946D46 /* LoginViewPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3BBDF2988017C00946D46 /* LoginViewPresenterMock.swift */; };
@@ -76,6 +80,10 @@
 		CE6608B9293B7E3A00343DAC /* LoginAuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthAPI.swift; sourceTree = "<group>"; };
 		CE83113B296D9717005660DC /* LoginUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserDefaults.swift; sourceTree = "<group>"; };
 		CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield-Extension.swift"; sourceTree = "<group>"; };
+		CE9F61C229AE856B0043E6A8 /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
+		CE9F61C429AE86710043E6A8 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		CE9F61C729AE89DF0043E6A8 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		CE9F61CB29AE8B050043E6A8 /* Employer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employer.swift; sourceTree = "<group>"; };
 		CEA12C4B29A3EB7E00F1CFC1 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
 		CEA3BBDD2987FF4500946D46 /* LoginViewInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractorTest.swift; sourceTree = "<group>"; };
 		CEA3BBDF2988017C00946D46 /* LoginViewPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterMock.swift; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 		CE1E2992299AB38E0042A450 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CE83113B296D9717005660DC /* LoginUserDefaults.swift */,
 				CE6608B9293B7E3A00343DAC /* LoginAuthAPI.swift */,
 			);
 			path = Service;
@@ -160,15 +169,15 @@
 		CE4ED213293A32FF00126078 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CE1E2992299AB38E0042A450 /* Service */,
+				CE1E2993299AB3A30042A450 /* LoginAuthWorker.swift */,
 				CE3D0C0C296DEC53005FF909 /* LoginRouter.swift */,
-				CE83113B296D9717005660DC /* LoginUserDefaults.swift */,
 				CE4ED215293A334100126078 /* LoginView.swift */,
 				CE4ED203293A31D500126078 /* LoginViewController.swift */,
 				CE4ED21A293A43E400126078 /* LoginViewInteractor.swift */,
-				CE5356B6293BCCB700E45A92 /* Model */,
-				CE1E2993299AB3A30042A450 /* LoginAuthWorker.swift */,
 				CEA12C4B29A3EB7E00F1CFC1 /* LoginViewPresenter.swift */,
+				CE9F61C129AE82AE0043E6A8 /* common */,
+				CE5356B6293BCCB700E45A92 /* Model */,
+				CE1E2992299AB38E0042A450 /* Service */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -198,7 +207,6 @@
 				CE5356B9293BCD3400E45A92 /* User.swift */,
 				CE2E3206294653E6001534F4 /* ResponseError.swift */,
 				CE42DE2A294674A0006BF843 /* Token.swift */,
-				CEE1ED97297194F70078943F /* LoginConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +224,23 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		CE9F61C129AE82AE0043E6A8 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				CEE1ED97297194F70078943F /* LoginConstants.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		CE9F61C629AE89A90043E6A8 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				CE9F61C729AE89DF0043E6A8 /* Users.swift */,
+				CE9F61CB29AE8B050043E6A8 /* Employer.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		CECAAB0D2982C6EB0075DCF9 /* ReqResVIPTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,8 +252,11 @@
 		CECD3AD4296DA3F900E3058E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CE9F61C629AE89A90043E6A8 /* models */,
 				CECD3AD5296DA40F00E3058E /* HomeView.swift */,
 				CECD3AD7296DA48E00E3058E /* HomeViewController.swift */,
+				CE9F61C229AE856B0043E6A8 /* HomeViewInteractor.swift */,
+				CE9F61C429AE86710043E6A8 /* HomeWorker.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -334,14 +362,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9F61C529AE86710043E6A8 /* HomeWorker.swift in Sources */,
 				CE4ED204293A31D500126078 /* LoginViewController.swift in Sources */,
 				CEA12C4C29A3EB7E00F1CFC1 /* LoginViewPresenter.swift in Sources */,
+				CE9F61CC29AE8B050043E6A8 /* Employer.swift in Sources */,
 				CECD3AD6296DA40F00E3058E /* HomeView.swift in Sources */,
 				CE83113C296D9717005660DC /* LoginUserDefaults.swift in Sources */,
 				CEE1ED98297194F70078943F /* LoginConstants.swift in Sources */,
 				CE98EF8729450CE0000D4729 /* Textfield-Extension.swift in Sources */,
+				CE9F61C329AE856B0043E6A8 /* HomeViewInteractor.swift in Sources */,
 				CE5356B8293BCCE100E45A92 /* LoadAuthModel.swift in Sources */,
 				CECD3AD8296DA48E00E3058E /* HomeViewController.swift in Sources */,
+				CE9F61C829AE89DF0043E6A8 /* Users.swift in Sources */,
 				CE3D0C0D296DEC53005FF909 /* LoginRouter.swift in Sources */,
 				CE42DE2B294674A0006BF843 /* Token.swift in Sources */,
 				CE2E3207294653E6001534F4 /* ResponseError.swift in Sources */,
