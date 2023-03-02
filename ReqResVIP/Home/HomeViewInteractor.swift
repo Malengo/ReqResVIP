@@ -19,6 +19,13 @@ class HomeViewInteractor: HomeViewBusinessLogic {
     }
     
     func fecthUsers() {
-        worker?.getAll()
+        worker?.getAll({ result in
+            switch result {
+            case .success(let clients):
+                print(clients)
+            case.failure(let error):
+                print(error)
+            }
+        })
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 struct Users: Codable {
-    var data: [Employer]
+    var data: [Client]
 }

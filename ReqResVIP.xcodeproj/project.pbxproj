@@ -33,7 +33,7 @@
 		CE9F61C329AE856B0043E6A8 /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C229AE856B0043E6A8 /* HomeViewInteractor.swift */; };
 		CE9F61C529AE86710043E6A8 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C429AE86710043E6A8 /* HomeWorker.swift */; };
 		CE9F61C829AE89DF0043E6A8 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C729AE89DF0043E6A8 /* Users.swift */; };
-		CE9F61CC29AE8B050043E6A8 /* Employer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61CB29AE8B050043E6A8 /* Employer.swift */; };
+		CE9F61CC29AE8B050043E6A8 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61CB29AE8B050043E6A8 /* Client.swift */; };
 		CEA12C4C29A3EB7E00F1CFC1 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA12C4B29A3EB7E00F1CFC1 /* LoginViewPresenter.swift */; };
 		CEA3BBDE2987FF4500946D46 /* LoginViewInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3BBDD2987FF4500946D46 /* LoginViewInteractorTest.swift */; };
 		CEA3BBE02988017C00946D46 /* LoginViewPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA3BBDF2988017C00946D46 /* LoginViewPresenterMock.swift */; };
@@ -83,7 +83,7 @@
 		CE9F61C229AE856B0043E6A8 /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
 		CE9F61C429AE86710043E6A8 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		CE9F61C729AE89DF0043E6A8 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		CE9F61CB29AE8B050043E6A8 /* Employer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employer.swift; sourceTree = "<group>"; };
+		CE9F61CB29AE8B050043E6A8 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		CEA12C4B29A3EB7E00F1CFC1 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
 		CEA3BBDD2987FF4500946D46 /* LoginViewInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractorTest.swift; sourceTree = "<group>"; };
 		CEA3BBDF2988017C00946D46 /* LoginViewPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterMock.swift; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9F61C729AE89DF0043E6A8 /* Users.swift */,
-				CE9F61CB29AE8B050043E6A8 /* Employer.swift */,
+				CE9F61CB29AE8B050043E6A8 /* Client.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 				CE9F61C529AE86710043E6A8 /* HomeWorker.swift in Sources */,
 				CE4ED204293A31D500126078 /* LoginViewController.swift in Sources */,
 				CEA12C4C29A3EB7E00F1CFC1 /* LoginViewPresenter.swift in Sources */,
-				CE9F61CC29AE8B050043E6A8 /* Employer.swift in Sources */,
+				CE9F61CC29AE8B050043E6A8 /* Client.swift in Sources */,
 				CECD3AD6296DA40F00E3058E /* HomeView.swift in Sources */,
 				CE83113C296D9717005660DC /* LoginUserDefaults.swift in Sources */,
 				CEE1ED98297194F70078943F /* LoginConstants.swift in Sources */,

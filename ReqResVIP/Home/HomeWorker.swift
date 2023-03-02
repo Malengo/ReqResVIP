@@ -8,22 +8,23 @@
 import Foundation
 
 protocol HomeWorkerProtocol {
-    func getAll()
+    func getAll(_ completion: @escaping (Result<[Client], ResponseError>) -> ())
 }
 
 class HomeWorker: HomeWorkerProtocol {
     
-    func getAll() {
+    func getAll(_ completion: @escaping (Result<[Client], ResponseError>) -> ()) {
         Task {
             do {
-                try await request()
-            } catch let error {
-                print(error)
+                let clients = try await request()
+                completion(.success(clients))
+            } catch let error as ResponseError {
+                completion(.failure(error))
             }
         }
     }
     
-    private func request() async throws {
+    private func request() async throws -> [Client]  {
         guard let url = URL(string: "https://reqres.in/api/users") else {
             throw ResponseError.invalidUrl
         }
@@ -42,8 +43,8 @@ class HomeWorker: HomeWorkerProtocol {
                 throw ResponseError.httpStatusCodeError(httpResponse.statusCode)
             }
             
-            let employer = try JSONDecoder().decode(Users.self, from: data)
-            
+            let clients = try JSONDecoder().decode(Users.self, from: data).data.map({ $0 as Client })
+            return clients
         } catch let error {
             throw error is DecodingError ? ResponseError.decodeError : ResponseError.invalidUrl
         }
