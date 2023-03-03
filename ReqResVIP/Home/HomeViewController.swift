@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeDisplayLogic {
+    func displayAllUsers(viewModel: HomeModel.GetUsers.ViewModel)
+}
+
 class HomeViewController: UIViewController {
     
     lazy var homeView: HomeView = {
@@ -16,6 +20,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - VIP
     var interactor: HomeViewBusinessLogic?
+    var presenter: HomePresentationLogic?
     
     // MARK: - lifeCycle
     override func viewDidLoad() {
@@ -31,6 +36,13 @@ class HomeViewController: UIViewController {
     
     // MARK: - private Methods
     private func setupVIP() {
-        interactor = HomeViewInteractor(worker: HomeWorker())
+        presenter = HomePresenter(view: self)
+        interactor = HomeInteractor(worker: HomeWorker(), presenter: presenter)
+    }
+}
+
+extension HomeViewController: HomeDisplayLogic {
+    func displayAllUsers(viewModel: HomeModel.GetUsers.ViewModel) {
+        viewModel.clients.forEach({ print($0) })
     }
 }

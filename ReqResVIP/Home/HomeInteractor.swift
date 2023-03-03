@@ -11,18 +11,22 @@ protocol HomeViewBusinessLogic {
     func fecthUsers()
 }
 
-class HomeViewInteractor: HomeViewBusinessLogic {
+class HomeInteractor: HomeViewBusinessLogic {
     
     var worker: HomeWorkerProtocol?
-    init(worker: HomeWorkerProtocol) {
+    var presenter: HomePresentationLogic?
+    
+    init(worker: HomeWorkerProtocol, presenter: HomePresentationLogic?) {
         self.worker = worker
+        self.presenter = presenter
     }
     
     func fecthUsers() {
         worker?.getAll({ result in
             switch result {
             case .success(let clients):
-                print(clients)
+                var response = HomeModel.GetUsers.Response(clients: clients)
+                self.presenter?.presentAll(response: response)
             case.failure(let error):
                 print(error)
             }

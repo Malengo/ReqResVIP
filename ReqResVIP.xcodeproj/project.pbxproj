@@ -13,6 +13,8 @@
 		CE22D71A299543460044D20E /* UIViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE22D719299543460044D20E /* UIViewControllerSpy.swift */; };
 		CE2E3207294653E6001534F4 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E3206294653E6001534F4 /* ResponseError.swift */; };
 		CE3D0C0D296DEC53005FF909 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D0C0C296DEC53005FF909 /* LoginRouter.swift */; };
+		CE42CC6629B26AFD003C0176 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42CC6529B26AFD003C0176 /* HomeModel.swift */; };
+		CE42CC6829B26E47003C0176 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42CC6729B26E47003C0176 /* HomePresenter.swift */; };
 		CE42DE2B294674A0006BF843 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42DE2A294674A0006BF843 /* Token.swift */; };
 		CE4DDD9C2983F9B000C564EF /* LoginViewInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DDD9B2983F9B000C564EF /* LoginViewInteractorMock.swift */; };
 		CE4DDD9E2984010A00C564EF /* LoginRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DDD9D2984010A00C564EF /* LoginRouterMock.swift */; };
@@ -30,7 +32,7 @@
 		CE6608BA293B7E3A00343DAC /* LoginAuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6608B9293B7E3A00343DAC /* LoginAuthAPI.swift */; };
 		CE83113C296D9717005660DC /* LoginUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83113B296D9717005660DC /* LoginUserDefaults.swift */; };
 		CE98EF8729450CE0000D4729 /* Textfield-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */; };
-		CE9F61C329AE856B0043E6A8 /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C229AE856B0043E6A8 /* HomeViewInteractor.swift */; };
+		CE9F61C329AE856B0043E6A8 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C229AE856B0043E6A8 /* HomeInteractor.swift */; };
 		CE9F61C529AE86710043E6A8 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C429AE86710043E6A8 /* HomeWorker.swift */; };
 		CE9F61C829AE89DF0043E6A8 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C729AE89DF0043E6A8 /* Users.swift */; };
 		CE9F61CC29AE8B050043E6A8 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61CB29AE8B050043E6A8 /* Client.swift */; };
@@ -61,6 +63,8 @@
 		CE22D719299543460044D20E /* UIViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerSpy.swift; sourceTree = "<group>"; };
 		CE2E3206294653E6001534F4 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		CE3D0C0C296DEC53005FF909 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		CE42CC6529B26AFD003C0176 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		CE42CC6729B26E47003C0176 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		CE42DE2A294674A0006BF843 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		CE4DDD9B2983F9B000C564EF /* LoginViewInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractorMock.swift; sourceTree = "<group>"; };
 		CE4DDD9D2984010A00C564EF /* LoginRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterMock.swift; sourceTree = "<group>"; };
@@ -80,7 +84,7 @@
 		CE6608B9293B7E3A00343DAC /* LoginAuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthAPI.swift; sourceTree = "<group>"; };
 		CE83113B296D9717005660DC /* LoginUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserDefaults.swift; sourceTree = "<group>"; };
 		CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield-Extension.swift"; sourceTree = "<group>"; };
-		CE9F61C229AE856B0043E6A8 /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
+		CE9F61C229AE856B0043E6A8 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		CE9F61C429AE86710043E6A8 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		CE9F61C729AE89DF0043E6A8 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		CE9F61CB29AE8B050043E6A8 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 			children = (
 				CE9F61C729AE89DF0043E6A8 /* Users.swift */,
 				CE9F61CB29AE8B050043E6A8 /* Client.swift */,
+				CE42CC6529B26AFD003C0176 /* HomeModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -255,8 +260,9 @@
 				CE9F61C629AE89A90043E6A8 /* models */,
 				CECD3AD5296DA40F00E3058E /* HomeView.swift */,
 				CECD3AD7296DA48E00E3058E /* HomeViewController.swift */,
-				CE9F61C229AE856B0043E6A8 /* HomeViewInteractor.swift */,
+				CE9F61C229AE856B0043E6A8 /* HomeInteractor.swift */,
 				CE9F61C429AE86710043E6A8 /* HomeWorker.swift */,
+				CE42CC6729B26E47003C0176 /* HomePresenter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -370,11 +376,12 @@
 				CE83113C296D9717005660DC /* LoginUserDefaults.swift in Sources */,
 				CEE1ED98297194F70078943F /* LoginConstants.swift in Sources */,
 				CE98EF8729450CE0000D4729 /* Textfield-Extension.swift in Sources */,
-				CE9F61C329AE856B0043E6A8 /* HomeViewInteractor.swift in Sources */,
+				CE9F61C329AE856B0043E6A8 /* HomeInteractor.swift in Sources */,
 				CE5356B8293BCCE100E45A92 /* LoadAuthModel.swift in Sources */,
 				CECD3AD8296DA48E00E3058E /* HomeViewController.swift in Sources */,
 				CE9F61C829AE89DF0043E6A8 /* Users.swift in Sources */,
 				CE3D0C0D296DEC53005FF909 /* LoginRouter.swift in Sources */,
+				CE42CC6829B26E47003C0176 /* HomePresenter.swift in Sources */,
 				CE42DE2B294674A0006BF843 /* Token.swift in Sources */,
 				CE2E3207294653E6001534F4 /* ResponseError.swift in Sources */,
 				CE4ED216293A334100126078 /* LoginView.swift in Sources */,
@@ -382,6 +389,7 @@
 				CE4ED200293A31D500126078 /* AppDelegate.swift in Sources */,
 				CE1E2994299AB3A30042A450 /* LoginAuthWorker.swift in Sources */,
 				CE5356BA293BCD3400E45A92 /* User.swift in Sources */,
+				CE42CC6629B26AFD003C0176 /* HomeModel.swift in Sources */,
 				CE6608BA293B7E3A00343DAC /* LoginAuthAPI.swift in Sources */,
 				CE4ED21B293A43E400126078 /* LoginViewInteractor.swift in Sources */,
 				CE4ED202293A31D500126078 /* SceneDelegate.swift in Sources */,
