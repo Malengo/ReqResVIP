@@ -231,13 +231,6 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		CE84E6E729B65A33003F912A /* common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
 		CE9F61C129AE82AE0043E6A8 /* common */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,7 +260,6 @@
 		CECD3AD4296DA3F900E3058E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CE84E6E729B65A33003F912A /* common */,
 				CE9F61C629AE89A90043E6A8 /* models */,
 				CECD3AD5296DA40F00E3058E /* HomeView.swift */,
 				CECD3AD7296DA48E00E3058E /* HomeViewController.swift */,
