@@ -11,29 +11,32 @@ protocol HomeWorkerProtocol {
     func getAll(_ completion: @escaping (Result<[Client], ResponseError>) -> ())
 }
 
-class HomeWorker: HomeWorkerProtocol {
+class HomeWorker: HomeWorkerProtocol, RequestApiProtocol {
     
-    func getAll(_ completion: @escaping (Result<[Client], ResponseError>) -> ()) {
-        Task {
-            do {
-                let clients = try await request()
-                completion(.success(clients))
-            } catch let error as ResponseError {
-                completion(.failure(error))
-            }
-        }
-    }
+    typealias RequestApi = Any
+    typealias ResponseApi = [Client]
+    var urlRequest: URL?
+    var request: URLRequest?
+    var data: Data?
     
-    private func request() async throws -> [Client]  {
-        guard let url = URL(string: "https://reqres.in/api/users") else {
+    // MARK: - RequestApiProtocol
+    func validUrl() throws {
+        guard let url = Foundation.URL(string: "https://reqres.in/api/users") else {
             throw ResponseError.invalidUrl
         }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
+        urlRequest = url
+    }
+    
+    func setupRequest(_ requestApi: RequestApi) throws {
+        guard let url = urlRequest else { throw ResponseError.invalidUrl }
+        var setupRequest = URLRequest(url: url)
+        setupRequest.httpMethod = "GET"
+        request = setupRequest
+    }
+    
+    func getData(_ completion: ([Client]) -> ()) async throws {
         do {
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await URLSession.shared.data(for: request!)
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 throw ResponseError.invalidData
@@ -44,9 +47,22 @@ class HomeWorker: HomeWorkerProtocol {
             }
             
             let clients = try JSONDecoder().decode(Users.self, from: data).data.map({ $0 as Client })
-            return clients
+            completion(clients)
         } catch let error {
             throw error is DecodingError ? ResponseError.decodeError : ResponseError.invalidUrl
+        }
+    }
+    
+    // MARK: - HomeWorkerProtocol
+    func getAll(_ completion: @escaping (Result<[Client], ResponseError>) -> ()) {
+        Task {
+            do {
+                try await callApi(request: "") { clients in
+                    completion(.success(clients))
+                }
+            } catch let error as ResponseError {
+                completion(.failure(error))
+            }
         }
     }
 }

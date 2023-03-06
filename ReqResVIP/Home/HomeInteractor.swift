@@ -25,7 +25,7 @@ class HomeInteractor: HomeViewBusinessLogic {
         worker?.getAll({ result in
             switch result {
             case .success(let clients):
-                var response = HomeModel.GetUsers.Response(clients: clients)
+                let response = HomeModel.GetUsers.Response(clients: clients)
                 self.presenter?.presentAll(response: response)
             case.failure(let error):
                 print(error)

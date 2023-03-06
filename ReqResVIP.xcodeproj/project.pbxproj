@@ -31,6 +31,7 @@
 		CE5670862991314200E0E60B /* LoginViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5670852991314200E0E60B /* LoginViewMock.swift */; };
 		CE6608BA293B7E3A00343DAC /* LoginAuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6608B9293B7E3A00343DAC /* LoginAuthAPI.swift */; };
 		CE83113C296D9717005660DC /* LoginUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83113B296D9717005660DC /* LoginUserDefaults.swift */; };
+		CE84E6E629B63412003F912A /* RequestApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84E6E529B63412003F912A /* RequestApiProtocol.swift */; };
 		CE98EF8729450CE0000D4729 /* Textfield-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */; };
 		CE9F61C329AE856B0043E6A8 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C229AE856B0043E6A8 /* HomeInteractor.swift */; };
 		CE9F61C529AE86710043E6A8 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F61C429AE86710043E6A8 /* HomeWorker.swift */; };
@@ -83,6 +84,7 @@
 		CE5670852991314200E0E60B /* LoginViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewMock.swift; sourceTree = "<group>"; };
 		CE6608B9293B7E3A00343DAC /* LoginAuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthAPI.swift; sourceTree = "<group>"; };
 		CE83113B296D9717005660DC /* LoginUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserDefaults.swift; sourceTree = "<group>"; };
+		CE84E6E529B63412003F912A /* RequestApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestApiProtocol.swift; sourceTree = "<group>"; };
 		CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield-Extension.swift"; sourceTree = "<group>"; };
 		CE9F61C229AE856B0043E6A8 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		CE9F61C429AE86710043E6A8 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				CE4ED218293A34F000126078 /* ViewCodeProtocol.swift */,
 				CE98EF8629450CE0000D4729 /* Textfield-Extension.swift */,
+				CE84E6E529B63412003F912A /* RequestApiProtocol.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -226,6 +229,13 @@
 				CE22D719299543460044D20E /* UIViewControllerSpy.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		CE84E6E729B65A33003F912A /* common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 		CE9F61C129AE82AE0043E6A8 /* common */ = {
@@ -257,6 +267,7 @@
 		CECD3AD4296DA3F900E3058E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CE84E6E729B65A33003F912A /* common */,
 				CE9F61C629AE89A90043E6A8 /* models */,
 				CECD3AD5296DA40F00E3058E /* HomeView.swift */,
 				CECD3AD7296DA48E00E3058E /* HomeViewController.swift */,
@@ -388,6 +399,7 @@
 				CE4ED219293A34F000126078 /* ViewCodeProtocol.swift in Sources */,
 				CE4ED200293A31D500126078 /* AppDelegate.swift in Sources */,
 				CE1E2994299AB3A30042A450 /* LoginAuthWorker.swift in Sources */,
+				CE84E6E629B63412003F912A /* RequestApiProtocol.swift in Sources */,
 				CE5356BA293BCD3400E45A92 /* User.swift in Sources */,
 				CE42CC6629B26AFD003C0176 /* HomeModel.swift in Sources */,
 				CE6608BA293B7E3A00343DAC /* LoginAuthAPI.swift in Sources */,
