@@ -11,15 +11,22 @@ protocol LoginAuthLogic {
     func makeAuth(user: LoginUser.Request, completion: @escaping(Result<Bool, ResponseError>) -> Void)
 }
 
-class LoginAuthAPI: LoginAuthLogic {
+class LoginAuthAPI: LoginAuthLogic, RequestApiProtocol {
+   
+    typealias ResponseApi = Bool
+    typealias RequestApi = LoginUser.Request
+    var urlRequest: URL?
+    var request: URLRequest?
+    var data: Data?
     
     let loginUserDefauts = LoginUserDefaults.standard
     
     func makeAuth(user: LoginUser.Request, completion: @escaping (Result<Bool, ResponseError>) -> Void) {
         Task {
             do {
-                try await requestApi(user: user)
-                completion(.success(true))
+                try await callApi(request: user) { result in
+                    completion(.success(result))
+                }
             } catch let error {
                 if error is DecodingError {
                     completion(.failure(.decodeError))
@@ -31,28 +38,34 @@ class LoginAuthAPI: LoginAuthLogic {
         }
     }
     
-    private func requestApi(user: LoginUser.Request) async throws {
-        guard let url = URL(string: LoginConstants.Authenticator.urlPostRequest.rawValue) else { throw ResponseError.invalidUrl }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+    // MARK: - RequestApiProtocol
+    func setupRequest(_ requestApi: LoginUser.Request) throws {
+        var urlRequest = URLRequest(url: urlRequest!)
+        urlRequest.httpMethod = "POST"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpBody = try JSONEncoder().encode(requestApi.user)
+        request = urlRequest
+    }
+    
+    func validUrl() throws {
+        guard let url = Foundation.URL(string: LoginConstants.Authenticator.urlPostRequest.rawValue) else { throw ResponseError.invalidUrl }
+        urlRequest = url
+    }
+    
+    func getData(_ completion: (Bool) -> ()) async throws {
         do {
-            request.httpBody = try JSONEncoder().encode(user.user)
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await URLSession.shared.data(for: request!)
             
             guard let httpResponse = response as? HTTPURLResponse else { throw ResponseError.invalidData }
-            guard httpResponse.statusCode == 200 else { throw ResponseError.httpStatusCodeError(httpResponse.statusCode) }
+            guard httpResponse.statusCode == 200 else {
+                throw ResponseError.httpStatusCodeError(httpResponse.statusCode)
+            }
             
             let token = try JSONDecoder().decode(Token.self, from: data)
-            
+            completion(true)
             DispatchQueue.global(qos: .background).async {
                 self.loginUserDefauts.saveToken(token.token)
             }
-            
-        } catch {
-            throw ResponseError.invalidData
         }
     }
 }
