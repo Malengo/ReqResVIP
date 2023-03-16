@@ -16,13 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = scene
-        var loadController: UIViewController = UIViewController()
-        if LoginUserDefaults.standard.checkDateToken() {
-            loadController = HomeViewController()
-        } else {
-            loadController = LoginViewController()
-        }
-        let navigation = UINavigationController(rootViewController: loadController)
+        let navigation = UINavigationController(rootViewController: LoginViewController())
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
     }

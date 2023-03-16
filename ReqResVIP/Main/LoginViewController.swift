@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 protocol LoginViewDisplayLogic {
     func successAuth()
@@ -28,6 +29,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setup()
         buttonAction()
+        interactor?.authenticateWithBiometrics()
     }
     
     override func loadView() {
@@ -57,7 +59,7 @@ class LoginViewController: UIViewController {
               let password = mainView.passwordTextField.text else { return }
         
         let user = LoginUser.Request(user: User(email: name, password: password))
-        interactor?.authenticateUser(request: user) 
+        interactor?.authenticateUser(request: user)
     }
 }
 
