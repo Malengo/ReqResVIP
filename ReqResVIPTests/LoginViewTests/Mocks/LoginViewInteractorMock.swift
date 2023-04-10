@@ -9,10 +9,14 @@ import Foundation
 @testable import ReqResVIP
 
 class LoginViewInteractorMock: LoginViewBusinessLogic {
-    
-    var wasAuthenticateUserCalled: Bool = false
-    
+    var wasAuthenticateUserCalled = false
     func authenticateUser(request: ReqResVIP.LoginUser.Request) {
-        wasAuthenticateUserCalled = true
+       wasAuthenticateUserCalled = true
     }
+    
+    func authenticateWithBiometrics() {
+        
+    }
+    
+  
 }
